@@ -26,7 +26,7 @@ namespace BitcoinAddressGenerator
             byte[] PublicHashHash = Sha256(PublicHash);
             Console.WriteLine("Public HashHash:" + ByteToHex(PublicHashHash));  
 
-            Console.WriteLine("Checksum:" + ByteToHex(PublicHashHash).Substring(0, 4)); 
+            Console.WriteLine("Checksum:" + ByteToHex(PublicHashHash).Substring(0, 11));
 
             byte[] Address = ConcatAddress(PreHashWNetwork, PublicHashHash);
             Console.WriteLine("Address:" + ByteToHex(Address)); 
